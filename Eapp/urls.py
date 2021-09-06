@@ -3,9 +3,9 @@ from .views import ItemList,DetailMixin,ItemView,ViewOrder
 
 
 urlpatterns=[
-    path("li",ItemList.as_view(),name="li"),
+    path("itemlist",ItemList.as_view(),name="itemlist"),
     path("detail",DetailMixin.as_view(),name="detail"),
-    path("iv/<int:pk>",ItemView.as_view(),name="iv"),
-    path("ov",ViewOrder.as_view(),name="ov")
+    path("itemview/<int:pk>",ItemView.as_view(),name="itemview"),
+    path("vieworder",ViewOrder.as_view(),name="vieworder")
 
 ]

@@ -2,13 +2,13 @@ from django.urls import path
 from .views import ListView,IndexView,DetailedView,AddToCartView,CartView,RemoveView,LoginView,OrderPro
 
 urlpatterns = [
-    path("l1",ListView.as_view(),name="l1"),
-    path("l2",IndexView.as_view(),name="l2"),
-    path("de/<int:pk>",DetailedView.as_view(),name="de"),
-    path("add/<int:id>",AddToCartView.as_view(),name="add"),
-    path("cart",CartView.as_view(),name="cart"),
-    path("remove/<int:pk>",RemoveView.as_view(),name="remove"),
-    path("login",LoginView.as_view(),name="login"),
-    path("op",OrderPro.as_view(),name="op")
+    path("listview",ListView.as_view(),name="listview"),
+    path("indexview",IndexView.as_view(),name="indexview"),
+    path("detailedview/<int:pk>",DetailedView.as_view(),name="detailedview"),
+    path("addtocart/<int:id>",AddToCartView.as_view(),name="addtocart"),
+    path("cartview",CartView.as_view(),name="cartview"),
+    path("removeview/<int:pk>",RemoveView.as_view(),name="removeview"),
+    path("loginview",LoginView.as_view(),name="loginview"),
+    path("orderpro",OrderPro.as_view(),name="orderpro")
 
 ]
